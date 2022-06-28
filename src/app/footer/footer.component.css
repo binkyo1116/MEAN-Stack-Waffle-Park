@@ -1,0 +1,40 @@
+footer{
+  padding-top:60px ;
+}
+footer a{
+  display: block;
+  font-size: 15px;
+  color: #111;
+  display: flex;
+  font-weight: 100;
+  text-align: center;
+  align-items: center;
+  line-height: 30px;
+  height: 100%;
+}
+
+.footer-copyright{
+  display: block;
+  font-size: 12px;
+  color: #111;
+  display: flex;
+  font-weight: 100;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-copyright span{
+  font-size: 12px;
+  color: #111;
+}
+
+.contact, .locate{
+  color: #111111;
+  font-size: 16px;
+  font-weight: 100;
+}
+.contact h4, .locate h4{
+  font-size: 18px;
+  font-weight: 400;
+}

@@ -1,0 +1,153 @@
+.home-block-nav{
+
+  display: flex;
+  position: sticky;
+  position: -webkit-sticky !important;
+  top:0;
+  z-index: 2;
+  margin-top: -10px;
+  height:75px;
+  padding: 0 60px;
+
+}
+.home-block-nav-logo{
+  width:20%;
+  display: flex;
+  justify-content: flex-start;
+}
+.home-block-nav-logo a{
+  font-size: 16px;
+  color: #111;
+  display: flex;
+  font-weight: 100;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+}
+.home-block-nav-btn{
+  width:20%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 0;
+}
+
+.home-block-nav-btn .cart {
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #111;
+  font-weight: 100;
+  padding: 0 12px;
+}
+.home-block-nav-btn .cart:hover{
+  background: rgba(0,0,0,0.1);
+}
+.home-block-nav-btn-sm{
+  display: none;
+}
+
+.home-block-nav mat-icon, .sidenav mat-icon{
+  color:#111;
+  margin-right: 10px;
+}
+
+.home-block-nav-menu{
+  width: 100%;
+  display: flex;
+}
+.home-block-nav ul{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+
+}
+.home-block-nav button {
+  display: block;
+  font-size: 16px;
+  color: #111;
+  font-weight: 100;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 0;
+}
+.home-block-nav button:hover{
+  background-color: rgba(0,0,0,0.1);
+}
+.home-block-nav li{
+  padding: 8px 12px;
+
+}
+.home-block-nav li a{
+  /*display: block;*/
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #111;
+  font-weight: 100;
+  height: 100%;
+  text-align: center;
+}
+
+
+.home-block-nav-logo-sm{
+  display: none;
+}
+
+
+
+.sidenav-container{
+  position: unset;
+}
+.sidenav{
+  width:260px;
+  position: fixed;
+}
+@media only screen and (max-width: 992px){
+
+  .home-block-nav-logo, .home-block-nav-btn {
+    display: none;
+  }
+  .home-block-nav-btn{
+    display: none !important;
+  }
+  .home-block-nav{
+    padding: 0 40px;
+  }
+  .sidenav-trigger {
+    color: #111 !important;
+  }
+  .home-block-nav-logo-sm{
+    display: flex;
+    align-items: center;
+    width: 75px;
+  }
+  .home-block-nav-logo-sm a, .home-block-nav-logo-sm button{
+    display: flex;
+    align-items: center;
+  }
+  .side-show{
+    display: block !important;
+  }
+  .home-block-nav-btn-sm{
+    left: calc(100% - 120px);
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .sidenav li a{
+    display: flex !important;
+    align-items: center;
+  }
+  .sidenav li button {
+      color: rgba(0,0,0,0.87);
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      height: 48px;
+      line-height: 48px;
+      padding: 0 32px;
+  }
+}

@@ -1,0 +1,32 @@
+<div class="address-form">
+  <div class="show-card-close">
+    <button mat-mini-fab (click)="onNoClick()" color="black" class="close"><i class="material-icons">close</i></button>
+  </div>
+  <form class="address-form" [formGroup]="AddressForm" (ngSubmit)="add_address()">
+    <h4>Add new address</h4>
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Block/ Flat No" matInput formControlName="flatNo" required/>
+      <mat-error *ngIf="flatNo.errors?.required">Flat/ Block number is <strong>required</strong></mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input type="text" matInput formControlName="body" placeholder="address" required/>
+      <mat-error *ngIf="address.errors?.required">Address is <strong>required</strong></mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input type="text" matInput formControlName="pincode" placeholder="pincode" required/>
+      <mat-error *ngIf="pincode.errors?.required">Pincode is <strong>required</strong></mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Select a label</mat-label>
+      <mat-select formControlName="label" required>
+        <mat-option value="home">Home</mat-option>
+        <mat-option value="work">Work</mat-option>
+        <mat-option value="label">Other</mat-option>
+      </mat-select>
+      <mat-error *ngIf="label.errors?.required">Label is <strong>required</strong></mat-error>
+    </mat-form-field>
+    <div class="address-main-feet"><button [disabled]="!AddressForm.valid" class="address-btn" mat-flat-button><strong>ADD NEW</strong></button></div>
+  </form>
+</div>
+
+

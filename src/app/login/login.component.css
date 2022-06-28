@@ -1,0 +1,83 @@
+.login{
+  padding: 44px 40px;
+}
+
+.login-head{
+  margin-bottom:30px;
+
+}
+.login-head h4{
+  font-size: 28px;
+  font-weight: 400;
+  color: #111;
+}
+.login-head p{
+  color: #111;
+  font-size: 17px;
+}
+.login-head .underline{
+  width: 40px;
+  height: 3px;
+  background: #111111;
+  margin-top: -5px;
+}
+
+.login-head span{
+  cursor: pointer;
+  color:#ee6e73;
+}
+
+.login-form{
+  min-width: 220px;
+  max-width: 450px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.example-full-width {
+  width: 100%;
+  margin-top:-2px;
+}
+
+.form-btn{
+  width: 100%;
+  color:#fff;
+  background: #ee6e73;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  margin: 30px 0 0 0 !important;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.form-btn:focus{
+  background: #ee6e73 !important;
+}
+
+
+.login-feet{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+mat-form-field.mat-form-field {
+  font-size: 15px;
+}
+.show-card-close{
+  position: absolute;
+  margin-left: 300px;
+  width: 100%;
+  margin-top: -10px;
+}
+.close{
+  box-shadow: 0 0!important;
+}
+.close:focus{
+ background: transparent;
+}

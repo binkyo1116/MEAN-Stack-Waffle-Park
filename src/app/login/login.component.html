@@ -1,0 +1,48 @@
+<div class="login">
+  <div class="show-card-close">
+    <button mat-mini-fab (click)="onNoClick()" color="black" class="close"><i class="material-icons">close</i></button>
+  </div>
+  <div class="login-head">
+    <h4>Login</h4>
+    <p>or <span (click)="openSignupDialog()"><strong>create an account</strong></span></p>
+    <div class="underline"></div>
+  </div>
+
+  <div class="login-body">
+    <form class="login-form" [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+
+      <mat-form-field class="example-full-width">
+        <input type="email" matInput placeholder="Email" formControlName="email">
+
+        <mat-error *ngIf="email.errors?.email && !email.errors?.required">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="email.errors?.required">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input type="password" matInput placeholder="Password" formControlName="password">
+        <mat-error *ngIf="password.errors?.minLength && !password.errors?.required">
+          Minimum length of 8 is required
+        </mat-error>
+        <mat-error *ngIf="password.errors?.required">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <button class="form-btn" [disabled]="!LoginForm.valid" mat-flat-button>Login</button>
+    </form>
+  </div>
+  <div class="login-feet">
+    <mat-progress-spinner *ngIf="isSubmit == true"
+        class="example-margin"
+        [color]="color"
+        [mode]="mode"
+        [value]="value"
+        [diameter]="30">
+    </mat-progress-spinner>
+    <p *ngIf="message != ''">{{message}}</p>
+  </div>
+
+</div>

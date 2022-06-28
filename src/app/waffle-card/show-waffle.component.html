@@ -1,0 +1,43 @@
+<div class="show-card">
+
+    <div class="show-card-close">
+      <button mat-mini-fab (click)="onNoClick()" color="black" class="close"><i class="material-icons">close</i></button>
+    </div>
+    <div class="show-card-inner">
+      <div class="show-card-image">
+        <img src="{{data.image}}" alt="{{data.title}} image" width="100%" height="100%">
+      </div>
+
+      <div class="show-card-content">
+
+        <mat-card-title-group>
+          <mat-card-title class="show-card-heading"><h3 mat-dialog-title>{{data.title}}</h3></mat-card-title>
+          <mat-card-subtitle class="show-card-sub">
+            <p>{{data.description}}<br>
+            <br><span class="price">{{data.price}}</span></p>
+          </mat-card-subtitle>
+        </mat-card-title-group>
+
+
+        <div class="card-action" mat-dialog-actions>
+          <div class="show-card-action">
+            <div class="show-card-controlls">
+              <button mat-mini-fab color="black" (click)="decQuantity()" class="show-card-controlls-btn">-</button>
+              <div class="show-card-controlls-qnt">{{quantity}}</div>
+              <button mat-mini-fab color="black" (click)="incQuantity()" class="show-card-controlls-btn">+</button>
+            </div>
+            <div class="show-card-checkout">
+              <button mat-flat-button class="checkout" (click)="addToCart()">
+                <div style="display: flex">
+                  <div class="show-card-checkout-text">Add {{quantity}} To Cart</div>
+                  <div class="show-card-checkout-total-price">INR {{totalPrice(data.price, quantity)}}</div>
+                </div>
+
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+

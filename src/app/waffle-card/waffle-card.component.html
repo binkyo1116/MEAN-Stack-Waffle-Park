@@ -1,0 +1,34 @@
+<div class="container waffle-card">
+  <div class="waffle-card-heading">
+    <h4>Our Specialities</h4>
+  </div>
+  <div *ngIf="fetching == true" class="fetching" style="padding-top: 50px">
+    <mat-progress-bar [mode]="mode" [color]="color"></mat-progress-bar>
+    <mat-progress-bar [mode]="mode" [color]="color"></mat-progress-bar>
+  </div>
+  <div *ngIf="fetching == true" class="fetching" style="padding-top: 50px">
+    <mat-progress-bar [mode]="mode" [color]="color"></mat-progress-bar>
+    <mat-progress-bar [mode]="mode" [color]="color"></mat-progress-bar>
+  </div>
+  <div *ngIf="fetching == true" class="fetching" style="padding-top: 50px">
+    <mat-progress-bar [mode]="mode" [color]="color"></mat-progress-bar>
+    <mat-progress-bar [mode]="mode" [color]="color"></mat-progress-bar>
+  </div>
+  <div class="row">
+    <div class="col s12 m6 l6 xl6 waffle-item" *ngFor="let waffle of waffles">
+
+        <mat-card class="example-card">
+          <a class="show_waffle" (click)="openDialog( waffle._id )">
+          <img mat-card-image src="{{waffle.image}}" alt="{{waffle.title}} image">
+          <mat-card-title-group>
+            <mat-card-title><h4>{{waffle.title}}</h4></mat-card-title>
+            <mat-card-subtitle>
+              <p>{{waffle.item}}</p>
+            </mat-card-subtitle>
+            <p class="price">{{waffle.price}}</p>
+          </mat-card-title-group>
+          </a>
+        </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,338 @@
+.main-flex{
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding-top: 40px;
+  background: #eee;
+}
+
+
+.main{
+  width:60%;
+  margin-left: 5%;
+  padding-left:5%;
+}
+
+.aside{
+  width: 35%;
+  padding-right: 8%;
+  padding-left: 2%;
+}
+
+.mat-step-header.cdk-keyboard-focused, .mat-step-header.cdk-program-focused, .mat-step-header:hover {
+  background-color: #fff !important;
+}
+
+.checkout-head{
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+
+.step{
+
+  padding: 20px 55px 50px 55px;
+  height: auto;
+  width: 100%;
+  background: white;
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+  z-index: 0;
+  margin-left:40px;
+}
+.step-head h4{
+  font-size: 32px;
+  font-weight: 400;
+  color:#111;
+  display: flex;
+  letter-spacing:0.3px
+}
+.account-body{
+  display: flex;
+}
+.account-body .account-signup{
+  float: right;
+}
+.account-btn-login{
+  color:#ee6e73;
+  background: #fff;
+  margin: 16px 26px 16px 0px !important;
+  border: 1px #ee6e73 solid !important;
+}
+
+.account-btn-signup {
+  color:#fff;
+  background: #ee6e73;
+  margin: 16px 0px !important;
+
+}
+
+.account-btn{
+  height: 50px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  width: 160px;
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+}
+.account-btn:hover{
+  box-shadow: 0 0 20px 10px rgba(1,1,1,0.07);
+}
+
+.account-btn span{
+  font-size: 12px;
+}
+.account-btn-signup:focus{
+  background: #ee6e73 !important;
+}
+.example-full-width{
+  width:100%;
+}
+.icon-back{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-left: 15px;
+  color: #fff;
+  background: #93c746b3;
+  border-radius: 50%;
+
+}
+.subtitle-text{
+  color:#666;
+  font-size: 16px;
+  margin-top: 30px;
+  letter-spacing: 0.5px;
+}
+
+.subtitle-text h4{
+  color:#111;
+  font-size: 17px;
+  text-transform:uppercase;
+  margin-bottom: 0px;
+}
+.grey-text{
+  color: #717171 !important;
+}
+.address-card{
+  padding: 30px 40px 30px 20px;
+  height: 200px;
+  background: white;
+  display: flex;
+  border:1.2px #bbb solid;
+  margin-bottom: 20px;
+}
+ .address-addnew{
+   background: url("../../assets/add_address3.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   border:1.3px #bbb dashed;
+ }
+.address-card:hover{
+  box-shadow: 0 2px 8px #d4d5d9;
+}
+.address-card-close{
+  position: absolute;
+  margin-top: -15px;
+}
+.address-card-close button{
+  box-shadow: 0 0;
+}
+
+.address-main{
+  width: 100%;
+  margin-left:18px;
+  display: block;
+}
+
+.address-main-head{
+  color:#111;
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  text-transform:uppercase;
+}
+.address-main-body{
+  height: 50px;
+  color:#666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.address-main-feet{
+  height: 40px;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+.address-main-body-addnew{
+  height: 95%;
+  display: flex;
+  align-items: center;
+}
+
+.address-btn{
+  height: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  width: auto;
+  padding: 0 20px;
+  border-radius: 1px;
+  border: 1.5px #ee6e73 solid;
+  color: #ee6e73;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+}
+.address-btn:hover{
+  box-shadow: 0 0 20px 10px rgba(1,1,1,0.07);
+}
+.address-btn:focus{
+  background: white;
+  box-shadow: 0 0 20px 10px rgba(1,1,1,0.07);
+}
+
+
+.address-btn-addnew{
+  height: 100px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  width: 100px;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1.5px #93c746b3 solid;
+  color: #93c746b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+}
+.address-btn-addnew:hover{
+  box-shadow: 0 0 20px 10px rgba(1,1,1,0.07);
+}
+.address-btn-addnew:focus{
+  background: white;
+  box-shadow: 0 0 20px 10px rgba(1,1,1,0.09);
+}
+
+
+.address-main-body{
+
+}
+
+
+.address-form{
+  padding: 25px 30px;
+}
+
+.address-form form{
+  margin-bottom: 20px;
+}
+.address-form form h4{
+  margin-bottom: 25px;
+  color:#111;
+  font-size: 20px;
+}
+
+
+.emptycart{
+  width: 100%;
+  display: flex;
+  position: relative;
+  background: #f0f0f0;
+  align-items: center;
+  justify-content: center;
+  min-height: 650px;
+  height: 100%;
+  height: -webkit-fill-available;;
+}
+.emptycart-body{
+  text-align: center;
+  width: 350px;
+  margin: 0;
+  padding: 0;
+}
+.emptycart-body img{
+  width: 300px;
+  padding: 0 40px;
+}
+.emptycart-body h4{
+  font-size: 20px;
+}
+.emptycart-body p{
+  font-size: 14px;
+  color: #666;
+}
+.emptycart-body a{
+  color: orange;
+  margin-top: 5px;
+}
+
+.show-card-close{
+  position: absolute;
+  margin-left: 300px;
+  width: 100%;
+  margin-top: 10px;
+}
+.close{
+  box-shadow: 0 0!important;
+}
+.close:focus{
+ background: transparent;
+}
+
+
+@media(max-width: 994px){
+  .main-flex{
+    display: block;
+  }
+  .main, .aside{
+    width: 100%;
+    padding: 25px;
+    margin: 0;
+  }
+}
+
+@media(max-width: 600px){
+  .step{
+    padding: 20px;
+  }
+  .main, .aside{
+    padding: 15px;
+  }
+
+}
+@media(max-width: 400px){
+  .account-btn{
+    height: 40px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0px;
+    width: 120px;
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*line-height: 0px;*/
+  }
+
+  .account-btn-login{
+    margin:15px 15px 15px 0px !important;
+  }
+  .show-card-close{
+    margin-left: 265px;
+  }
+}
+@media(max-width: 320px){
+  .show-card-close{
+    margin-left: 225px;
+  }
+}
+

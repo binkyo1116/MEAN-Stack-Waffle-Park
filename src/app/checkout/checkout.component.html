@@ -1,0 +1,90 @@
+<div>
+  <app-navbar></app-navbar>
+  <div class="emptycart" *ngIf="isCartEmpty == true">
+    <div class="emptycart-body">
+      <img src="https://www.pinclipart.com/picdir/big/92-923392_png-images-free-download-waffle-clip-art-transparent.png" alt="">
+      <h4>Your cart is empty</h4>
+      <p>You can go to home page to park waffles in your cart <br><a href="">Go Home</a></p>
+    </div>
+  </div>
+  <div class="main-flex"*ngIf="isCartEmpty == false">
+    <div class="main">
+      <div class="checkout-head">
+        <h4>Secure Checkout</h4>
+      </div>
+      <div class="checkout-body">
+        <div class="row">
+          <div class="col s12 step account">
+            <div class="step-head"><h4>Account <div class="icon-back" *ngIf="session == true"><mat-icon>check</mat-icon></div></h4></div>
+            <div *ngIf="session == false">
+              <p class="grey-text">To place your order now, log in to your existing account or sign up.</p>
+              <div class="account-body">
+                <div class="account-login">
+                  <button class="account-btn account-btn-login" type="button" (click)="openLoginDialog()" mat-flat-button><span>Have an account?</span><br>LOG IN</button>
+                </div>
+                <div class="account-signup">
+                  <button class="account-btn account-btn-signup" type="button" (click)="openSignupDialog()" mat-flat-button><span>Create new account?</span><br>SIGN UP</button>
+                </div>
+              </div>
+            </div>
+            <div  *ngIf="session == true" class="subtitle-text">
+              <strong>{{user.name}} | {{user.email}}</strong>
+            </div>
+          </div>
+          <div class="col s12 step address">
+            <div class="step-head"><h4 [ngClass]="{'grey-text' : session === false}">Address<div class="icon-back" *ngIf="session == true && issetLocation == true"><mat-icon>check</mat-icon></div></h4></div>
+            <div class="step-body" *ngIf="session == true && issetLocation == false">
+              <p class="grey-text">You can choose delivery address from your previous ones you can add a new one here.</p>
+
+              <div class="row">
+                <div class="col s12 m6" *ngFor="let loc of locations; let i = index">
+
+                  <div class="address-card">
+                    <div class="address-card-close" (click)="removeAddress(i)" style="display: flex; justify-content: center">
+                        <button mat-mini-fab color="black" class="close"><i class="material-icons">close</i></button>
+                    </div>
+                    <div style="display: flex; width: 100%">
+                      <mat-icon>{{loc.label}}</mat-icon>
+                      <div class="address-main">
+                        <div class="address-main-head"><strong>{{loc.label}}</strong></div>
+                        <div class="address-main-body">
+                          {{loc.flatNo}}, {{loc.body}}, {{loc.pincode}}
+                        </div>
+                        <div class="address-main-feet"><button class="address-btn" (click)="set_location(loc)" mat-flat-button><strong>DELIVER HERE</strong></button></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col s12 m6">
+                  <div class="address-card address-addnew">
+                    <mat-icon>location_on</mat-icon>
+                    <div class="address-main">
+                      <div class="address-main-head"><strong>Add New Address</strong></div>
+                      <div class="address-main-body"></div>
+                      <div class="address-main-feet"><button class="address-btn" (click)="openAddressDialog()" mat-flat-button><strong>ADD NEW</strong></button></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div  *ngIf="session == true && issetLocation == true" class="subtitle-text">
+              <h4>{{selectedLocation.label}}</h4>
+              <strong>{{give_address(selectedLocation)}}</strong><br>
+              <a (click)="changeAddressSession(false)">Change Address</a>
+            </div>
+          </div>
+          <div class="col s12 step payment">
+            <div class="step-head"><h4 [ngClass]="{'grey-text' : session == false || issetLocation == false}">Payment</h4></div>
+            <div class="step-body" *ngIf="session == true && issetLocation == true">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-sidecart class="aside" [pageName]="pageName" (isCartEmpty)="cartLenghtHandler($event)" ></app-sidecart>
+
+  </div>
+</div>

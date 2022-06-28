@@ -1,0 +1,47 @@
+<mat-card class="sidecart shadow">
+
+
+  <a href="/checkout" [ngClass]="{'disabled' : cart.length<=0}" *ngIf="pageName == 'home'">
+    <div  mat-flat-button  class="checkout">
+
+        <div class="btn-totali">{{totalItems()}} items</div>
+        <div class="btn-name">Checkout</div>
+        <div class="btn-totalm">INR [{{totalAmount()}}]</div>
+
+    </div>
+  </a>
+  <mat-divider></mat-divider>
+  <div *ngIf="fetching == true" class="fetching">
+    <mat-progress-bar [mode]="mode" [color]="color"></mat-progress-bar>
+  </div>
+
+  <mat-card-subtitle *ngIf="cart.length <=0" class="sidecart-sub">
+    <span *ngIf="pageName == 'home'">Your parked waffles will be shown here!</span>
+  </mat-card-subtitle>
+  <div class="parked-list" [ngClass]="{'displayOnClick' : style}" *ngIf="cart.length >0">
+    <div class="cart-item" *ngFor="let c of cart; let i = index" [ngClass]="{'false': i ==0}">
+      <div class="cart-item-inner">
+        <div class="cart-item-content">
+          <div class="cart-item-heading">{{c.title}}</div>
+            <div class="show-card-controlls">
+                <button mat-mini-fab color="black" (click)="decQuantity(i)" class="show-card-controlls-btn">-</button>
+                <div class="show-card-controlls-qnt">{{c.quantity}}</div>
+                <button mat-mini-fab color="black" (click)="incQuantity(i)" class="show-card-controlls-btn">+</button>
+            </div>
+        </div>
+        <div class="cart-item-price">INR {{ totalItemPrice(c.price, c.quantity)}}
+        <button class="cart-item-remove" mat-button (click)="removeItem(i)">Remove</button></div>
+      </div>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div mat-flat-button class="checkout checkout-viewcart" (click)="display()" *ngIf="pageName == 'checkout'">
+      <div class="btn-totali">{{totalItems()}} items</div>
+      <div class="btn-name">{{cartName}}</div>
+      <div class="btn-totalm">INR [{{totalAmount()}}]</div>
+  </div>
+  <div class="sub-total" *ngIf="cart.length >0">
+    <div class="sub-total-item">Subtotal ({{totalItems()}} items)</div>
+    <div class="sub-total-amount">INR {{totalAmount()}}</div>
+  </div>
+</mat-card>
