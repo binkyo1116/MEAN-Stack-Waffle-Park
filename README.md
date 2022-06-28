@@ -141,8 +141,3 @@ Functions
 7. **Login** - This method is called when the req `POST /api/login` is made along with the login form data. Its basic functionality is to first verify the credentials and successfully log in to the user else report errors. Same as in signup it also further checks if the cart sessions are not empty and assign that cart to this new user by again taking the help of `updateUserCart(req, res, msg, data = false)`.
 8. **Logout** - This method is called when the req `GET /api/logout` is made. Its basic functionality is to delete the set sessions and successfully log out to the user.
 
-
-***************
-Copyright
---------
-Healthcoco Pvt. Ltd
